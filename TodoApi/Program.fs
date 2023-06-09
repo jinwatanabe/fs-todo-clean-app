@@ -17,6 +17,7 @@ open Microsoft.Extensions.Logging
 open Microsoft.AspNetCore.Http
 open TodoApi.Controllers
 open TodoApi.Controllers.Systems
+open TodoApi.Controllers.Todos
 
 module Program =
     let exitCode = 0
@@ -35,6 +36,9 @@ module Program =
         // app.MapControllers()
 
         app.MapGet("/v1/systems/ping", Func<IResult> (fun _ -> ping()))
+
+        app.MapGet("/v1/todos", Func<IResult> Todos.getAllTodos)
+        
 
         app.Run()
 
