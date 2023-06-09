@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WJydspeIlq2tXAM5ZW+mns07ogfzseAgImWaFNuKwZF0CZ6hwVu2zSvc9ggPCfMS7FuOqrACQouCNnUmMGFMyg==",
+  "success": true,
+  "projectFilePath": "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj",
+  "expectedPackageFiles": [
+    "/home/watanabejin/.nuget/packages/fsharp.core/7.0.300/fsharp.core.7.0.300.nupkg.sha512"
+  ],
+  "logs": []
+}

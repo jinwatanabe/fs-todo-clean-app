@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj": {}
+  },
+  "projects": {
+    "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj",
+        "projectName": "fs-todo-clean-app",
+        "projectPath": "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj",
+        "packagesPath": "/home/watanabejin/.nuget/packages/",
+        "outputPath": "/home/watanabejin/workspace/fs-todo-clean-app/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/watanabejin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/sdk/7.0.302/FSharp/library-packs": {},
+          "/usr/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[7.0.300, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
