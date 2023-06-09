@@ -1,4 +1,5 @@
 namespace TodoApi
+
 #nowarn "20"
 open System
 open System.Collections.Generic
@@ -13,6 +14,9 @@ open Microsoft.Extensions.Configuration
 open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
+open Microsoft.AspNetCore.Http
+open TodoApi.Controllers
+open TodoApi.Controllers.Systems
 
 module Program =
     let exitCode = 0
@@ -28,8 +32,9 @@ module Program =
 
         app.UseHttpsRedirection()
 
-        app.UseAuthorization()
-        app.MapControllers()
+        // app.MapControllers()
+
+        app.MapGet("/v1/systems/ping", Func<IResult> (fun _ -> ping()))
 
         app.Run()
 
