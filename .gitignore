@@ -1,1 +1,3 @@
 TodoApi/bin
+TodoApi.Test/bin
+.fake

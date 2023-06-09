@@ -1,0 +1,155 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi.Test/TodoApi.Test.fsproj": {}
+  },
+  "projects": {
+    "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi.Test/TodoApi.Test.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi.Test/TodoApi.Test.fsproj",
+        "projectName": "TodoApi.Test",
+        "projectPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi.Test/TodoApi.Test.fsproj",
+        "packagesPath": "/home/watanabejin/.nuget/packages/",
+        "outputPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi.Test/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/watanabejin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/sdk/7.0.302/FSharp/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj": {
+                "projectPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[7.0.300, )",
+              "generatePathProperty": true
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )",
+              "generatePathProperty": true
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )",
+              "generatePathProperty": true
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.3.0, )",
+              "generatePathProperty": true
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )",
+              "generatePathProperty": true
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj",
+        "projectName": "TodoApi",
+        "projectPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj",
+        "packagesPath": "/home/watanabejin/.nuget/packages/",
+        "outputPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/watanabejin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/sdk/7.0.302/FSharp/library-packs": {},
+          "/usr/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[7.0.300, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
