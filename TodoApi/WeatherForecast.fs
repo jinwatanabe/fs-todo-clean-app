@@ -1,4 +1,4 @@
-namespace fs_todo_clean_app
+namespace TodoApi
 
 open System
 

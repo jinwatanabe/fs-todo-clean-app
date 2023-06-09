@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>fs_todo_clean_app</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

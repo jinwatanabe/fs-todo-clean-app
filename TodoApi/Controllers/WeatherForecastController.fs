@@ -1,4 +1,4 @@
-﻿namespace fs_todo_clean_app.Controllers
+﻿namespace TodoApi.Controllers
 
 open System
 open System.Collections.Generic
@@ -6,7 +6,7 @@ open System.Linq
 open System.Threading.Tasks
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Logging
-open fs_todo_clean_app
+open TodoApi
 
 [<ApiController>]
 [<Route("[controller]")>]

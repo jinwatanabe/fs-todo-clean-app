@@ -1,4 +1,4 @@
-namespace fs_todo_clean_app
+namespace TodoApi
 #nowarn "20"
 open System
 open System.Collections.Generic

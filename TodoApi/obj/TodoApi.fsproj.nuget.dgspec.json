@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj": {}
+    "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj": {}
   },
   "projects": {
-    "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj": {
+    "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj",
-        "projectName": "fs-todo-clean-app",
-        "projectPath": "/home/watanabejin/workspace/fs-todo-clean-app/fs-todo-clean-app.fsproj",
+        "projectUniqueName": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj",
+        "projectName": "TodoApi",
+        "projectPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj",
         "packagesPath": "/home/watanabejin/.nuget/packages/",
-        "outputPath": "/home/watanabejin/workspace/fs-todo-clean-app/obj/",
+        "outputPath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/watanabejin/.nuget/NuGet/NuGet.Config"
