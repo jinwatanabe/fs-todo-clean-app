@@ -35,10 +35,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )",
+              "generatePathProperty": true
+            },
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
               "version": "[7.0.300, )",
+              "generatePathProperty": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.33, )",
               "generatePathProperty": true
             }
           },

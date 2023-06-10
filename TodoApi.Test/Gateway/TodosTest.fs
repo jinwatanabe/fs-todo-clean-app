@@ -12,14 +12,19 @@ module TodosTest =
     [<Test>]
     let ``すべてのTodoを取得できる`` () =
 
-        let mockDriver : TodosDriver = {
-            GetAll = fun () ->
-            [
-                { Id = 1; Title = "First"; Done = false }
-                { Id = 2; Title = "Second"; Done = true }
-            ]
-            |> Task.FromResult
-        }
+        let mockDriver =
+            { new TodosDriver with
+                member this.GetAll() =
+                    async {
+                        let todos =
+                            [
+                                { Id = 1; Title = "First"; Done = false }
+                                { Id = 2; Title = "Second"; Done = true }
+                            ]
+                        return todos
+                    }
+                    |> Async.StartAsTask
+            }
 
         let todosGateway = { driver = mockDriver }
         let result = GetAll todosGateway ()

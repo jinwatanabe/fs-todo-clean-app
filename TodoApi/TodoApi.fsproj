@@ -6,12 +6,18 @@
 
   <ItemGroup>
     <Compile Include="Domain/Todo.fs" />
-    <Compile Include="Driver/Todos.fs" />
+    <Compile Include="Driver/*" />
     <Compile Include="Port/*" />
     <Compile Include="Gateway/Todos.fs" />
-    <Compile Include="Controllers/Systems.fs" />
+    <Compile Include="Controllers/*" />
     <Compile Include="Usecases/*" />
+    <Compile Include="StartUp.fs" />
     <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
 </Project>
