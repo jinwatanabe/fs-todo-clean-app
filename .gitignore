@@ -1,3 +1,4 @@
 TodoApi/bin
 TodoApi.Test/bin
 .fake
+TodoApi.Test/TestResults

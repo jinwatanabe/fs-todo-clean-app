@@ -5,9 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Controllers/Systems.fs" />
     <Compile Include="Domain/Todo.fs" />
+    <Compile Include="Driver/Todos.fs" />
     <Compile Include="Port/*" />
+    <Compile Include="Gateway/Todos.fs" />
+    <Compile Include="Controllers/Systems.fs" />
     <Compile Include="Usecases/*" />
     <Compile Include="Program.fs" />
   </ItemGroup>
