@@ -69,6 +69,23 @@
           }
         }
       },
+      "FSharp.SystemTextJson/1.1.23": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.7.0",
+          "System.Text.Json": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FSharp.SystemTextJson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.SystemTextJson.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -637,6 +654,20 @@
         "lib/netstandard2.1/tr/FSharp.Core.resources.dll",
         "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll",
         "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
+    "FSharp.SystemTextJson/1.1.23": {
+      "sha512": "LixaMQr3AVFleiBwcFRtBPYZ6VSlgi2aMDgXJAaP4dHad1nnpz6siT3kCeWT29P/wwaSMHPBmD18NQ7pGyS+dA==",
+      "type": "package",
+      "path": "fsharp.systemtextjson/1.1.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.systemtextjson.1.1.23.nupkg.sha512",
+        "fsharp.systemtextjson.nuspec",
+        "lib/netstandard2.0/FSharp.SystemTextJson.dll",
+        "lib/netstandard2.0/FSharp.SystemTextJson.pdb",
+        "lib/netstandard2.0/FSharp.SystemTextJson.xml"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -1831,6 +1862,7 @@
     "net7.0": [
       "Dapper >= 2.0.123",
       "FSharp.Core >= 7.0.300",
+      "FSharp.SystemTextJson >= 1.1.23",
       "MySql.Data >= 8.0.33"
     ]
   },
@@ -1877,6 +1909,11 @@
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[7.0.300, )",
+            "generatePathProperty": true
+          },
+          "FSharp.SystemTextJson": {
+            "target": "Package",
+            "version": "[1.1.23, )",
             "generatePathProperty": true
           },
           "MySql.Data": {

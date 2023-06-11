@@ -15,6 +15,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMySql_Data Condition=" '$(PkgMySql_Data)' == '' ">/home/watanabejin/.nuget/packages/mysql.data/8.0.33</PkgMySql_Data>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/home/watanabejin/.nuget/packages/fsharp.core/7.0.300</PkgFSharp_Core>
+    <PkgFSharp_SystemTextJson Condition=" '$(PkgFSharp_SystemTextJson)' == '' ">/home/watanabejin/.nuget/packages/fsharp.systemtextjson/1.1.23</PkgFSharp_SystemTextJson>
     <PkgDapper Condition=" '$(PkgDapper)' == '' ">/home/watanabejin/.nuget/packages/dapper/2.0.123</PkgDapper>
   </PropertyGroup>
 </Project>

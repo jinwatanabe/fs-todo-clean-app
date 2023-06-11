@@ -3,7 +3,7 @@ namespace Usecases
 open NUnit.Framework
 
 open TodoApi.Domain
-open Usecases.GetTodos
+open Usecase.GetTodos
 
 [<TestFixture>]
 module GetTodosTest =

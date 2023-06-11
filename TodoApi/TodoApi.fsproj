@@ -10,13 +10,13 @@
     <Compile Include="Port/*" />
     <Compile Include="Gateway/Todos.fs" />
     <Compile Include="Controllers/*" />
-    <Compile Include="Usecases/*" />
-    <Compile Include="StartUp.fs" />
+    <Compile Include="Usecase/*" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="FSharp.SystemTextJson" Version="1.1.23" />
     <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 

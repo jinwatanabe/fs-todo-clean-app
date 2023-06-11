@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZWvupJq8uyL9FmkrtXj6iCWrhoqZ+Y3OgyJ/6HXI9QUaPYag8yPgvhNbNOxnr0F8vFHyA3CMsEjjzr6ytzFK3w==",
+  "dgSpecHash": "3AZmrhj7iOmRTu1KEaRLEf5jZtK2aA6f1ZBUIHaowRVLnYQVwg8cLlL15hdVuA4TPVRsrblXAPS7HE05/1OaFA==",
   "success": true,
   "projectFilePath": "/home/watanabejin/workspace/fs-todo-clean-app/TodoApi/TodoApi.fsproj",
   "expectedPackageFiles": [
     "/home/watanabejin/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
     "/home/watanabejin/.nuget/packages/fsharp.core/7.0.300/fsharp.core.7.0.300.nupkg.sha512",
+    "/home/watanabejin/.nuget/packages/fsharp.systemtextjson/1.1.23/fsharp.systemtextjson.1.1.23.nupkg.sha512",
     "/home/watanabejin/.nuget/packages/google.protobuf/3.21.9/google.protobuf.3.21.9.nupkg.sha512",
     "/home/watanabejin/.nuget/packages/k4os.compression.lz4/1.3.5/k4os.compression.lz4.1.3.5.nupkg.sha512",
     "/home/watanabejin/.nuget/packages/k4os.compression.lz4.streams/1.3.5/k4os.compression.lz4.streams.1.3.5.nupkg.sha512",

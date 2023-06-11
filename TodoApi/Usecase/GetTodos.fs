@@ -1,4 +1,4 @@
-module Usecases.GetTodos
+module Usecase.GetTodos
 
 open TodoApi.Port
 open TodoApi.Domain

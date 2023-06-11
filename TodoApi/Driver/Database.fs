@@ -14,7 +14,7 @@ let getConnectionStringFromEnvironment () =
     let dbName = Environment.GetEnvironmentVariable("DB_NAME") // 環境変数からデータベース名を取得
     let user = Environment.GetEnvironmentVariable("DB_USER") // 環境変数からユーザー名を取得
     let password = Environment.GetEnvironmentVariable("DB_PASSWORD") // 環境変数からパスワードを取得
-    $"Server={host};Port={port};Database={dbName};Uid={user};Pwd={password}"
+    $"Server={host};Port={port};Database={dbName};Uid={user};Pwd={password};SslMode=None"
 
 let createDbConnection () =
     let connectionString = getConnectionStringFromEnvironment ()
