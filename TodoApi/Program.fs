@@ -16,8 +16,7 @@ open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
 open Microsoft.AspNetCore.Http
 open TodoApi.Controllers
-open FSharp.SystemTextJson
-open TodoApi.Domain
+
 
 module Program =
     open System.Text.Json
@@ -34,8 +33,6 @@ module Program =
 
         app.UseHttpsRedirection()
 
-        // app.MapControllers()
-
         app.MapGet("/v1/systems/ping", Func<IResult> (fun _ -> Systems.ping()))
 
         app.MapGet("/v1/todos",
@@ -46,21 +43,8 @@ module Program =
                     GetAll =
                         Gateway.Todos.GetAll(gateway)
                 }
-
-                let todos = Usecase.GetTodos.getAllTodos getTodosDeps
-                match todos with
-                | Ok todos -> 
-                    let todosJson =
-                        todos
-                        |> Array.map (fun todo -> 
-                            let (TodoId id, TodoTitle title , TodoDone done_) = (todo.Id, todo.Title, todo.Done)
-                            {| Id = id; Title = title; Done = done_ |}
-                        )
-                    let options = JsonSerializerOptions()
-                    let todosJsonString = JsonSerializer.Serialize(todosJson, options)
-                    Results.Ok(JsonDocument.Parse(todosJsonString))
-                | Error err ->
-                    Results.Problem(err)
+                let todosController = TodosController()
+                todosController.getAll getTodosDeps
             ))
 
 
