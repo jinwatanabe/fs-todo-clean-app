@@ -24,5 +24,3 @@ module GetTodosTest =
           match getAllTodos deps with
           | Ok todos -> Assert.AreEqual(2, todos.Length)
           | _ -> Assert.Fail()
-
-
