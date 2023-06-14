@@ -6,18 +6,16 @@ open TodoApi.Port.Todo
 
 type TodoGateway = { driver: TodoDriver }
 
-let GetById (gateway: TodoGateway) (id: TodoId) : GetById = 
-    fun (id) ->
-        let todoAsync =
-            async {
-                let (TodoId intId) = id 
-                let! todo = gateway.driver.GetById intId |> Async.AwaitTask
-                let mappedTodo =
-                    {
-                        Id = todo.Id
-                        Title = todo.Title
-                        Done = todo.Done
-                    }
-                return Ok mappedTodo
+let GetById (gateway: TodoGateway) : GetById = 
+    fun id ->
+        let (TodoId intId) = id 
+        let todoTask = gateway.driver.GetById intId
+        let todoAsync = todoTask |> Async.AwaitTask 
+        let todo = Async.RunSynchronously todoAsync 
+        let mappedTodo =
+            {
+                Id = todo.Id
+                Title = todo.Title
+                Done = todo.Done
             }
-        Async.RunSynchronously todoAsync
+        Ok mappedTodo
