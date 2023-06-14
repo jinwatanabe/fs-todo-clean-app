@@ -16,6 +16,7 @@ open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
 open Microsoft.AspNetCore.Http
 open TodoApi.Controllers
+open TodoApi.Domain
 
 
 module Program =
@@ -37,7 +38,7 @@ module Program =
 
         app.MapGet("/v1/todos",
             Func<IResult>(fun _ ->
-                let driver = TodoApi.Driver.Todos.createMySqlTodosDriver()
+                let driver = Driver.Todos.createMySqlTodosDriver()
                 let gateway = { Gateway.Todos.TodosGateway.driver = driver}
                 let getTodosDeps: Usecase.GetTodos.GetTodosDeps = {
                     GetAll =
@@ -47,6 +48,17 @@ module Program =
                 todosController.getAll getTodosDeps
             ))
 
+        app.MapGet("v1/todos/{id:int}", 
+            Func<HttpContext, int, IResult>(fun context id -> 
+                let driver = Driver.Todo.createMySqlTodoDriver()
+                let gateway = { Gateway.Todo.TodoGateway.driver = driver }
+                let getByIdTodoDeps: Usecase.GetTodo.GetTodoDeps = {
+                    GetById =
+                        Gateway.Todo.GetById(gateway)
+                }
+                let todoController = TodoController()
+                todoController.getById getByIdTodoDeps (TodoId id)
+            ))
 
         app.Run()
 
