@@ -11,11 +11,14 @@ let GetById (gateway: TodoGateway) : GetById =
         let (TodoId intId) = id 
         let todoTask = gateway.driver.GetById intId
         let todoAsync = todoTask |> Async.AwaitTask 
-        let todo = Async.RunSynchronously todoAsync 
-        let mappedTodo =
-            {
-                Id = todo.Id
-                Title = todo.Title
-                Done = todo.Done
-            }
-        Ok mappedTodo
+        let optionTodo = Async.RunSynchronously todoAsync 
+        match optionTodo with
+        | Some todo ->
+            let mappedTodo =
+                {
+                    Id = TodoId todo.Id
+                    Title = TodoTitle todo.Title
+                    Done = TodoDone todo.Done
+                }
+            Ok mappedTodo
+        | None -> Error "Todo not found"

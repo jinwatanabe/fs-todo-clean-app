@@ -13,7 +13,7 @@ module TodoTest =
             { new TodoDriver with
                 member this.GetById(id) =
                     async {
-                        let todo = { Id = TodoId 1; Title = TodoTitle "First"; Done = TodoDone false }
+                        let todo = Some { Id = 1; Title = "First"; Done = false }
                         return todo
                     }
                     |> Async.StartAsTask
@@ -21,8 +21,8 @@ module TodoTest =
         
         let id = TodoId 1
         let todoGateway = { driver = mockDriver }
-        let getByIdFunc = GetById todoGateway  // GetById関数を呼び出して、関数を取得します。
-        let result = getByIdFunc id  // 取得した関数にidを渡して実行します。
+        let getByIdFunc = GetById todoGateway
+        let result = getByIdFunc id
 
         match result with
         | Ok todo ->

@@ -8,7 +8,7 @@ type TodoJson = { Id : int; Title : string; Done : bool }
 type TodosDriver =
     abstract member GetAll : unit -> Task<TodoJson list>
 
-type MySqlTodoDriver(connection: MySqlConnection) =
+type MySqlTodosDriver(connection: MySqlConnection) =
     interface TodosDriver with
         member this.GetAll() =
             async {
@@ -18,6 +18,6 @@ type MySqlTodoDriver(connection: MySqlConnection) =
             }
             |> Async.StartAsTask
 
-let createMySqlTodoDriver () =
+let createMySqlTodosDriver () =
     let connection = Database.createDbConnection()
-    MySqlTodoDriver(connection)
+    MySqlTodosDriver(connection)

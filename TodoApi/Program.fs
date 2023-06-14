@@ -37,7 +37,7 @@ module Program =
 
         app.MapGet("/v1/todos",
             Func<IResult>(fun _ ->
-                let driver = TodoApi.Driver.Todos.createMySqlTodoDriver()
+                let driver = TodoApi.Driver.Todos.createMySqlTodosDriver()
                 let gateway = { Gateway.Todos.TodosGateway.driver = driver}
                 let getTodosDeps: Usecase.GetTodos.GetTodosDeps = {
                     GetAll =
