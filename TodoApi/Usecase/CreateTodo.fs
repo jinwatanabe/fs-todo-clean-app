@@ -1,6 +1,6 @@
 module Usecase.CreateTodo
 
-open TodoApi.Port.Todo
+open TodoApi.Port.CreateTodo
 open TodoApi.Domain
 open TodoApi.Http.Response
 
