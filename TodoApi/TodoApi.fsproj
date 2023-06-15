@@ -3,6 +3,7 @@
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Http/Response.fs" />
     <Compile Include="Domain/*" />
     <Compile Include="Driver/*" />
     <Compile Include="Port/*" />
