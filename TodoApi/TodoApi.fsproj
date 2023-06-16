@@ -5,6 +5,7 @@
   <ItemGroup>
     <Compile Include="Http/Response.fs" />
     <Compile Include="Domain/*" />
+    <Compile Include="Driver/Database.fs" />
     <Compile Include="Driver/*" />
     <Compile Include="Port/*" />
     <Compile Include="Gateway/*" />

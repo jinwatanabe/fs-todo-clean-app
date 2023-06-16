@@ -59,6 +59,18 @@ module Program =
                 let todoController = TodoController()
                 todoController.getById getByIdTodoDeps (TodoId id)
             ))
+        
+        app.MapPost("/v1/todos",
+            Func<HttpContext, IResult>(fun context ->
+                let driver = Driver.CreateTodo.createMySqlCreateTodoDriver()
+                let gateway = { Gateway.CreateTodo.driver = driver }
+                let createTodoDeps: Usecase.CreateTodo.CreateTodoDeps = {
+                    Create =
+                        Gateway.CreateTodo.Create(gateway)
+                }
+                let todoController = CreateTodoController()
+                todoController.create createTodoDeps context
+            ))
 
         app.Run()
 

@@ -7,7 +7,7 @@ open TodoApi.Http.Response
 open TodoApi.Domain
 
 type CreateTodoDriver =
-    abstract member Create: TodoTitle -> Task<Result<CreateResponse, string>>
+    abstract member Create: string -> Task<Result<CreateResponse, string>>
 
 type MySqlCreateTodoDriver(connection: MySqlConnection) =
     interface CreateTodoDriver with
@@ -22,3 +22,7 @@ type MySqlCreateTodoDriver(connection: MySqlConnection) =
                 else
                     return Result.Ok { message = "ok" }
             } |> Async.StartAsTask
+
+let createMySqlCreateTodoDriver () =
+    let connection = Database.createDbConnection()
+    MySqlCreateTodoDriver(connection)
