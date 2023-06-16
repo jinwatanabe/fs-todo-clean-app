@@ -13,7 +13,7 @@ module CreateTodoTest =
         
         let title = TodoTitle "title1"
 
-        let create : TodoTitle -> Result<CreateResponse, string> =
+        let create : TodoTitle -> Result<MessageResponse, string> =
             fun title ->
                 Ok { message = "ok" }
 

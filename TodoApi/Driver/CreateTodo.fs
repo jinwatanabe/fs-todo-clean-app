@@ -7,7 +7,7 @@ open TodoApi.Http.Response
 open TodoApi.Domain
 
 type CreateTodoDriver =
-    abstract member Create: string -> Task<Result<CreateResponse, string>>
+    abstract member Create: string -> Task<Result<MessageResponse, string>>
 
 type MySqlCreateTodoDriver(connection: MySqlConnection) =
     interface CreateTodoDriver with

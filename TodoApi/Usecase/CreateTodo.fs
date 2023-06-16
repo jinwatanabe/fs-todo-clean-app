@@ -12,5 +12,5 @@ type TodoCreateUsecase(deps: CreateTodoDeps) =
     member this.Create(title: TodoTitle) =
         deps.Create(title)
 
-let createTodo (deps: CreateTodoDeps) (title: TodoTitle) : Result<CreateResponse, string> =
+let createTodo (deps: CreateTodoDeps) (title: TodoTitle) : Result<MessageResponse, string> =
     TodoCreateUsecase(deps).Create(title)
