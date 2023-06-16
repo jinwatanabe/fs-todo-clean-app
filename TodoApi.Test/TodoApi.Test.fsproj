@@ -6,6 +6,7 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Gateway/UpdateTodoTest.fs" />
     <Compile Include="Http/*" />
     <Compile Include="Domain/*" />
     <Compile Include="Gateway/*" />
