@@ -8,8 +8,8 @@ type UpdateTodoDeps =
     { Update: Update }
 
 type TodoUpdateUsecase(deps: UpdateTodoDeps) =
-    member this.Update(id: TodoId, title: TodoTitle, done_: TodoDone) =
+    member this.Update(id: TodoId, title: TodoTitle, done_: TodoDone option) =
         deps.Update(id)(title)(done_)
 
-let updateTodo (deps: UpdateTodoDeps) (id: TodoId) (title: TodoTitle) (done_: TodoDone) : Result<MessageResponse, string> =
+let updateTodo (deps: UpdateTodoDeps) (id: TodoId) (title: TodoTitle) (done_: TodoDone option) : Result<MessageResponse, string> =
     TodoUpdateUsecase(deps).Update(id, title, done_)

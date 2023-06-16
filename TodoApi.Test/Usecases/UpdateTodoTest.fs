@@ -12,9 +12,9 @@ module UpdateCreateTest =
     let ``Idに紐づくTodoを更新する`` () =
         let id = TodoId 1
         let title = TodoTitle "title1"
-        let done_ = TodoDone true
+        let done_ = Some(TodoDone true)
 
-        let update : TodoId -> TodoTitle -> TodoDone -> Result<MessageResponse, string> =
+        let update : TodoId -> TodoTitle -> TodoDone option -> Result<MessageResponse, string> =
             fun id title done_ ->
                 Ok { message = "ok" }
 

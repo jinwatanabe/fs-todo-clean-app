@@ -71,6 +71,18 @@ module Program =
                 let todoController = CreateTodoController()
                 todoController.create createTodoDeps context
             ))
+        
+        app.MapPut("/v1/todos/{id:int}",
+            Func<HttpContext, int, IResult>(fun context id ->
+                let driver = Driver.UpdateTodo.createMySqlUpdateTodoDriver()
+                let gateway = { Gateway.UpdateTodo.driver = driver }
+                let updateTodoDeps: Usecase.UpdateTodo.UpdateTodoDeps = {
+                    Update =
+                        Gateway.UpdateTodo.Update(gateway)
+                }
+                let todoController = UpdateTodoController()
+                todoController.update updateTodoDeps context id
+            ))
 
         app.Run()
 
