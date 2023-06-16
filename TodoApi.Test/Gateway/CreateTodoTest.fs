@@ -14,7 +14,7 @@ module CreateTodoTest =
             { new CreateTodoDriver with
                 member this.Create(title) =
                     async {
-                        return { message = "ok"}
+                        return Ok { message = "ok"}
                     }
                     |> Async.StartAsTask
             }
