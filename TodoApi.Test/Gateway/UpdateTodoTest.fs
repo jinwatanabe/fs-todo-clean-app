@@ -15,9 +15,11 @@ module UpdateTodoTest =
               return Ok { message = "ok" }
           }
           |> Async.StartAsTask
-          |> Async.AwaitTask
 
-      let mockDriver = { Update = updateFunc }
+
+      let mockDriver = { new UpdateTodoDriver with
+          member this.Update (id) (title) (done_) = updateFunc id title done_
+      }
 
       let id = TodoId 1
       let title = TodoTitle "title1"

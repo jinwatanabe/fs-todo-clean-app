@@ -12,4 +12,4 @@ let Update (gateway: UpdateTodoGateway) : Update =
                 let (TodoTitle title) = title
                 let (TodoDone done_) = done_
                 let task = gateway.driver.Update id title done_
-                task |> Async.RunSynchronously
+                task |> Async.AwaitTask |> Async.RunSynchronously
