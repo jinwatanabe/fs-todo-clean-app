@@ -4,7 +4,6 @@ open System.Threading.Tasks
 open MySql.Data.MySqlClient
 open Dapper
 open TodoApi.Http.Response
-open TodoApi.Domain
 
 type CreateTodoDriver =
     abstract member Create: string -> Task<Result<MessageResponse, string>>
