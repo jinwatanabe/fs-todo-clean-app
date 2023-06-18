@@ -83,6 +83,18 @@ module Program =
                 let todoController = UpdateTodoController()
                 todoController.update updateTodoDeps context id
             ))
+        
+        app.MapDelete("/v1/todos/{id:int}",
+            Func<HttpContext, int, IResult>(fun context id ->
+                let driver = Driver.DeleteTodo.createMySqlDeleteTodoDriver()
+                let gateway = { Gateway.DeleteTodo.driver = driver }
+                let deleteTodoDeps: Usecase.DeleteTodo.DeleteTodoDeps = {
+                    Delete =
+                        Gateway.DeleteTodo.Delete(gateway)
+                }
+                let todoController = DeleteTodoController()
+                todoController.delete deleteTodoDeps context
+            ))
 
         app.Run()
 
